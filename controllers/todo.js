@@ -12,7 +12,7 @@ module.exports = {
                     if(result.length){
                         globalResponse(res,STATUS_CODE.success,1,'Todo list',result);
                     }else{
-                        globalResponse(res,STATUS_CODE.success,0,'No Todo Found',result);
+                        globalResponse(res,STATUS_CODE.success,0,'No Todo Found',[]);
 
                     }
                     return
@@ -28,7 +28,7 @@ module.exports = {
                     try{
                         const errors = validationResult(req); 
                         if (!errors.isEmpty()) {
-                            globalResponse(res,422,0,'Validation Errors','',errors.array())
+                            globalResponse(res,STATUS_CODE.success,0,'Validation Errors','',errors.array())
                             return;
                         }
                         const {name,detail,duedate} = req.body
@@ -62,7 +62,7 @@ module.exports = {
                 try {
                     const errors = validationResult(req); 
                     if (!errors.isEmpty()) {
-                        globalResponse(res,422,0,'Validation Errors','',errors.array())
+                        globalResponse(res,STATUS_CODE.success,0,'Validation Errors','',errors.array())
                         return;
                     }        
                     const {id} = req.params
@@ -82,7 +82,7 @@ module.exports = {
                 try {
                     const errors = validationResult(req); 
                     if (!errors.isEmpty()) {
-                        globalResponse(res,422,0,'Validation Errors','',errors.array())
+                        globalResponse(res,STATUS_CODE.success,0,'Validation Errors','',errors.array())
                         return;
                     }        
                     const {id} = req.params

@@ -23,6 +23,31 @@
   color: #61dafb;
 }
 
+.addTodoDiv{
+  text-align: right;
+  margin-bottom: 2%
+}
+.todoDiv{
+  margin-top: 5%
+}
+
+.error{
+  color:red
+}
+.iconFa{
+  font-size: 30px;
+    margin-left: 5%;
+}
+.completeTodo{
+  color:dodgerblue
+}
+.removeTodo{
+  color:red
+}
+
+.react-datepicker-wrapper{
+  width: 100% !important
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
