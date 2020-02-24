@@ -73,7 +73,7 @@ export const deleteTodoApi = payload =>{
         }
         let apiResp;
         try {
-            apiResp = await deleteRequest(DELETE_TODO + '..'+ payload.id, payload, {});
+            apiResp = await deleteRequest(DELETE_TODO + payload.id, payload, {});
             //console.log(apiResp.data, "resp");
             return onSuccess(apiResp);
         } catch (error) {

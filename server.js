@@ -21,14 +21,14 @@ mongoose.connect(DATABASE, (err) => {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // app.use(expressValidator())
-// app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 //todo route
 app.use('/todos', todo);
 
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'client/build/index.html'));
-// })
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build/index.html'));
+})
 
 app.listen(PORT, (err) => {
     if (err) console.log("err");
