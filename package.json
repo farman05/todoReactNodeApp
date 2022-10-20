@@ -15,7 +15,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.15.4",
     "express-validator": "^6.4.0",
-    "mongoose": "^4.11.12",
+    "mongoose": "^4.13.21",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-redux": "^7.2.0",
     "react-router": "^5.1.2",
